@@ -27,7 +27,7 @@ class DefaultRedactionsService implements RedactionsService {
 
   redact(input: string): string {
     if (this.#pattern) {
-      return input.replace(this.#pattern, '[REDACTED]');
+      return input.replace(this.#pattern, '***');
     }
     return input;
   }

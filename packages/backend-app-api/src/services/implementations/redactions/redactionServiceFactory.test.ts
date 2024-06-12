@@ -38,13 +38,13 @@ describe('redactionServiceFactory', () => {
 
     expect(redactions.redact('xyz')).toBe('xyz');
     redactions.addRedactions(['xyz']);
-    expect(redactions.redact('xyz')).toBe('[REDACTED]');
-    expect(redactions.redact('axyzb')).toBe('a[REDACTED]b');
-    expect(redactions.redact('.xyz')).toBe('.[REDACTED]');
-    expect(redactions.redact('xyz.')).toBe('[REDACTED].');
-    expect(redactions.redact('.xyz.')).toBe('.[REDACTED].');
-    expect(redactions.redact('xyz.xyz')).toBe('[REDACTED].[REDACTED]');
-    expect(redactions.redact('xyzxyz')).toBe('[REDACTED][REDACTED]');
+    expect(redactions.redact('xyz')).toBe('***');
+    expect(redactions.redact('axyzb')).toBe('a***b');
+    expect(redactions.redact('.xyz')).toBe('.***');
+    expect(redactions.redact('xyz.')).toBe('***.');
+    expect(redactions.redact('.xyz.')).toBe('.***.');
+    expect(redactions.redact('xyz.xyz')).toBe('***.***');
+    expect(redactions.redact('xyzxyz')).toBe('******');
   });
 
   it('should prioritize earlier redactions', async () => {
@@ -54,8 +54,8 @@ describe('redactionServiceFactory', () => {
 
     redactions.addRedactions(['xy']);
     redactions.addRedactions(['xyz']);
-    expect(redactions.redact('xyzxy')).toBe('[REDACTED]z[REDACTED]');
-    expect(redactions.redact('xyzxyz')).toBe('[REDACTED]z[REDACTED]z');
+    expect(redactions.redact('xyzxy')).toBe('***z***');
+    expect(redactions.redact('xyzxyz')).toBe('***z***z');
   });
 
   it('should ignore whitespace in redactions', async () => {
@@ -66,9 +66,7 @@ describe('redactionServiceFactory', () => {
     redactions.addRedactions(['abc\n\n']);
     redactions.addRedactions([' xyz ']);
     redactions.addRedactions(['\t\n123']);
-    expect(redactions.redact('abcxyz123')).toBe(
-      '[REDACTED][REDACTED][REDACTED]',
-    );
+    expect(redactions.redact('abcxyz123')).toBe('*********');
   });
 
   it('should ignore redactions that are too short', async () => {
@@ -87,6 +85,6 @@ describe('redactionServiceFactory', () => {
     ).get();
 
     redactions.addRedactions(['^(|)[^\\s]$']);
-    expect(redactions.redact('^(|)[^\\s]$')).toBe('[REDACTED]');
+    expect(redactions.redact('^(|)[^\\s]$')).toBe('***');
   });
 });
