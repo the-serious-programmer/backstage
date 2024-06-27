@@ -1,5 +1,15 @@
 # @backstage/plugin-catalog-backend-module-unprocessed
 
+## 0.4.9-next.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/backend-common@0.23.3-next.1
+  - @backstage/backend-plugin-api@0.6.22-next.1
+  - @backstage/plugin-auth-node@0.4.17-next.1
+  - @backstage/plugin-catalog-node@1.12.4-next.1
+
 ## 0.4.8-next.0
 
 ### Patch Changes

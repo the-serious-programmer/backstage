@@ -1,5 +1,17 @@
 # example-app
 
+## 0.2.99-next.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-techdocs@1.10.7-next.1
+  - @backstage/plugin-home@0.7.7-next.1
+  - @backstage/plugin-scaffolder-react@1.10.0-next.1
+  - @backstage/plugin-scaffolder@1.22.1-next.1
+  - @backstage/cli@0.26.11-next.0
+  - @backstage/plugin-techdocs-module-addons-contrib@1.1.12-next.0
+
 ## 0.2.99-next.0
 
 ### Patch Changes

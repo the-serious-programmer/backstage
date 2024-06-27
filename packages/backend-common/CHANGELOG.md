@@ -1,5 +1,15 @@
 # @backstage/backend-common
 
+## 0.23.3-next.1
+
+### Patch Changes
+
+- b9ed1bb: bumped better-sqlite3 from ^9.0.0 to ^11.0.0
+- Updated dependencies
+  - @backstage/backend-plugin-api@0.6.22-next.1
+  - @backstage/config-loader@1.8.1
+  - @backstage/plugin-auth-node@0.4.17-next.1
+
 ## 0.23.2-next.0
 
 ### Patch Changes

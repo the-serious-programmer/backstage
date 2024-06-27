@@ -1,5 +1,13 @@
 # @backstage/plugin-scaffolder-node
 
+## 0.4.8-next.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/backend-common@0.23.3-next.1
+  - @backstage/backend-plugin-api@0.6.22-next.1
+
 ## 0.4.7-next.0
 
 ### Patch Changes

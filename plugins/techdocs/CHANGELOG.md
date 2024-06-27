@@ -1,5 +1,11 @@
 # @backstage/plugin-techdocs
 
+## 1.10.7-next.1
+
+### Patch Changes
+
+- 60caa92: Fix double scrollbar bug in reader
+
 ## 1.10.7-next.0
 
 ### Patch Changes
